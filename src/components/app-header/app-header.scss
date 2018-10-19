@@ -1,0 +1,106 @@
+@import '../../styles/definitions';
+
+header {
+  @include shadowed;
+  background-color: $slate;
+  position: relative;
+
+  nav {
+    padding: $default-padding;
+    max-width: $desktop-content;
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding: 0;
+    font-weight: 600;
+
+    a {
+      @include transition;
+      color: $white;
+
+      &:hover {
+        color: $sky;
+      }
+    }
+  }
+
+  .menu {
+    @include transition(left, ease-in-out, 150ms);
+    @include shadowed;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100vw;
+    background-color: darken($slate, 10%);
+    padding: 2em 1em;
+    color: $white;
+    min-width: 50vw;
+    max-width: 90vw;
+
+    @include tablet-up {
+      box-shadow: none;
+      position: static;
+      background: none;
+      padding: 0;
+    }
+
+    button {
+      @include transition(all, ease-in-out, 150ms);
+      position: absolute;
+      display: block;
+      opacity: 1;
+      background: none;
+      border: none;
+      left: -52px;
+      top: 12px;
+      font-size: 2em;
+      margin: 0.67em 0;
+      color: $white;
+
+      @include tablet-up {
+        display: none;
+      }
+    }
+
+    a {
+      @include transition;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $light-gray;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &.open {
+      left: 50vw;
+
+      button {
+        opacity: 0;
+        left: 100%;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include tablet-up {
+        flex-direction: row;
+      }
+
+      li {
+        margin-bottom: $default-margin;
+
+        @include tablet-up {
+          margin-right: $default-margin;
+        }
+      }
+    }
+  }
+}

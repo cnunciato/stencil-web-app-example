@@ -1,0 +1,42 @@
+@import '../../styles/definitions';
+
+app-posts {
+
+  ol {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  li {
+    @include rounded;
+    @include shadowed;
+    display: block;
+    background-color: $white;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    h2 {
+      margin: 0 0 $default-margin / 2;
+      font-size: 2rem;
+      font-weight: 600;
+
+      a {
+        @include transition;
+        color: $graphite;
+
+        &:hover {
+          color: lighten($slate, 10%);
+        }
+
+        &:active {
+          color: $slate;
+        }
+      }
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+}

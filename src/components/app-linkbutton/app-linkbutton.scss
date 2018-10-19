@@ -1,0 +1,49 @@
+@import '../../styles/definitions';
+
+a {
+  @include rounded($default-radius / 2);
+  @include transition;
+  display: inline-block;
+  padding: 1em;
+  background-color: $sky;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid darken($sky, 10%);
+
+  .left, .right {
+    @include transition(margin-left, margin-right);
+  }
+
+  &:hover {
+    background-color: darken($sky, 5%);
+
+    .left & {
+      margin-right: 2px;
+    }
+
+    .right & {
+      margin-left: 2px;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.right {
+
+  a:after {
+    content: ' →';
+  }
+}
+
+.left {
+
+  a:before {
+    content: '← ';
+  }
+}

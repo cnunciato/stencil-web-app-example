@@ -1,0 +1,35 @@
+@import '~normalize.css/normalize.css';
+@import 'definitions';
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, $light-gray, $white);
+  font-family: $body-font;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: normal;
+}
+
+main {
+  padding: 0 1em;
+  max-width: $desktop-content;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  @include rounded;
+  background-color: lighten($light-gray, 5%);
+  padding: 4px 6px;
+}

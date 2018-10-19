@@ -1,0 +1,8 @@
+@import '../../styles/definitions';
+
+app-not-found {
+
+  section {
+    @include page-body;
+  }
+}

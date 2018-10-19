@@ -1,0 +1,90 @@
+// Colors
+$white: #FFF;
+$light-gray: #DDD;
+$medium-gray: #BBB;
+$gray: #AAA;
+$graphite: #222;
+$slate: #3F5363;
+$sky: #6BB3E3;
+
+$text: $graphite;
+$link: $sky;
+
+// Fonts
+$body-font: 'open-sans', Arial, Helvetica, sans-serif;
+$heading-font: 'jaf-domus', Arial, Helvetica, sans-serif;
+
+// Borders
+$default-border: 1px solid $light-gray;
+$default-radius: 4px;
+
+@mixin bordered {
+  border: $default-border;
+}
+
+@mixin rounded($radius: $default-radius) {
+  border-radius: $default-radius;
+}
+
+// Margins and padding
+$default-margin: 1em;
+$default-padding: 1em;
+
+// Shadows
+$default-shadow: 0 4px 8px 0 rgba(99, 99, 99, 0.4);
+
+@mixin shadowed() {
+  box-shadow: $default-shadow;
+}
+
+// Breakpoints
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-content: 800px;
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Transitions
+$default-transition-duration: 100ms;
+
+@mixin transition($props: all, $func: linear, $duration: $default-transition-duration) {
+  transition: $props $func $duration;
+}
+
+// Content
+@mixin page-body {
+  @include rounded;
+  @include shadowed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: $white;
+  padding: 1em;
+  line-height: 1.6;
+
+  ol, ul {
+
+    li:not(:last-child) {
+      margin-bottom: $default-margin / 2;
+    }
+  }
+
+  a {
+    @include transition;
+    color: $link;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($link, 10%);
+    }
+  }
+}

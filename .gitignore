@@ -1,0 +1,7 @@
+.stencil/
+node_modules/
+www/
+cypress/videos
+cypress/screenshots
+.DS_Store
+Thumbs.db
