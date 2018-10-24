@@ -8,8 +8,8 @@
 import '@stencil/core';
 
 import '@stencil/router';
-import '@stencil/redux';
 import '@stencil/state-tunnel';
+import '@stencil/redux';
 import {
   ActiveRouter,
   MatchResults,

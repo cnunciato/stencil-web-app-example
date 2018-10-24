@@ -2,6 +2,8 @@
 
 This is a single-page app consisting mainly of two views: a home page listing some blog posts and a detail view for each post. Rather than go with a full-blown single-page-app framework like Angular or Ember, I've chosen to use a web-component compiler called [Stencil](https://stenciljs.com/) to create a few components, add a bit of routing, fold in [Redux](https://redux.js.org/) for state, and test it all with a tool called [Cypress](https://www.cypress.io/).
 
+[![Build Status](https://travis-ci.org/cnunciato/stencil-web-app-example.svg?branch=master)](https://travis-ci.org/cnunciato/stencil-web-app-example)
+
 ## Installing and Running This App
 
 1. First, install the [current version of Node](https://nodejs.org/en/). (The project requires Node 10 with NPM 6.) If you're [an `nvm` user](https://github.com/creationix/nvm), just run:

@@ -1,0 +1,14 @@
+env:
+  matrix:
+    secure: NgyU757dERrL7zixWBlJ2vyiBDfa3iNyH0YSfGyt4luZMU5QZ3IqzYX0jSEDNLL2Zc+GLzRphj5VQ4oPgoHvVSDQxMpQ/T/4zw/yjfKYNteZcIlWoLPO3a0IJBhKAkiNQeOxkUfWKqqrH7YDG/5oPpZfMpjbqR7j+qJ0tiiszfv2sWAJXsAWzJKnkMu4oPdQyosnsm8u5ZXYtau7LS1nitjFdzu24iqcYaSy3dhbPQkSTrhWCXBV0lFYvgopYQ2fmlZn2aae/kfuIrSzZ5NpB/n7uEXfJ6FhNyrPH1YcrhS3DtjP0QS+sS5C0xW00ZPRpLOJ6bUASmaolJUorYlcexcugnHHav6ePG4nbeUjTgo5Wi6V/MZ3pg1pJLgNfhxRIVFHG+MwzUMcR6wk5mHtmYToDiRu8v19IwLY+0hYVeIVq+PUassZDi2XwYhwiGhfmGMO0KicLXRYTnCjcPvGzZSXzyLqZgDilH29GVcsSBNirEL9GR+JE7mY3MWU+mYxzDHZ4jRw7a83mTaDd7Ouj+z8AL4vDIhwzQweOXBiehoxJOlMz4HO9HNUv9VLd0t3QePBJ2hlDBncw7InGsYcLhC/HWfV1/0xq7mn/AvH7cIKQs/KPmZKlZr3wBTNJt/heHM1+6rpU1+ALHrjl9neyTYSQXA4fxPy7cHnk7hWrKY=
+language: node_js
+node_js:
+  - 10
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+script:
+  - npm run travis
