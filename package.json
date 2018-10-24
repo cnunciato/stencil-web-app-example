@@ -12,9 +12,11 @@
     "build": "stencil build --prerender",
     "cypress:open": "concurrently --success first --kill-others 'npm run server' 'cypress open'",
     "cypress:run": "concurrently --success first --kill-others 'npm run server' 'cypress run'",
+    "cypress:ci": "concurrently --success first --kill-others 'npm run server' 'cypress run --record'",
     "start": "concurrently --success first 'npm run api' 'wait-on http://localhost:3000 && npm run server'",
     "server": "stencil build --dev --serve --watch --es5",
     "test": "npm run cypress:run",
+    "travis": "npm run cypress:ci",
     "dev": "npm run cypress:open"
   },
   "dependencies": {
